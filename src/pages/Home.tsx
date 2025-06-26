@@ -30,7 +30,7 @@ const Home: React.FC = () => {
                   </span>
                 </h1>
                 <h2 className="text-2xl lg:text-3xl font-semibold text-gray-700 dark:text-gray-300">
-                  Front End Developer
+                  FrontEnd Developer
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
                 I’m a frontend developer focused on building clean, responsive, and accessible interfaces. From landing pages to complex dashboards, I turn ideas into engaging digital experiences using React, JavaScript, and modern UI frameworks
