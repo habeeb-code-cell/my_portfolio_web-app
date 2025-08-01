@@ -1,56 +1,39 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Download, Github, Linkedin, Twitter, Mail, Award, Sun, Moon } from 'lucide-react';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  Download,
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  Award,
+} from "lucide-react";
 
 const Home: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-    // Set initial theme based on localStorage or system preference
-    const storedTheme = localStorage.getItem('theme');
-    if (storedTheme) {
-      setIsDarkMode(storedTheme === 'dark');
-      document.documentElement.classList.toggle('dark', storedTheme === 'dark');
-    } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setIsDarkMode(prefersDark);
-      document.documentElement.classList.toggle('dark', prefersDark);
-    }
   }, []);
-
-  const toggleTheme = () => {
-    const newTheme = isDarkMode ? 'light' : 'dark';
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle('dark', !isDarkMode);
-    localStorage.setItem('theme', newTheme);
-  };
-
 
   return (
     <div className="pt-20">
-      {/* Theme Toggle Button */}
-      <div className="fixed top-4 right-4 z-50">
-        <button
-          onClick={toggleTheme}
-          className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full shadow-lg hover:scale-110 transition-all duration-300"
-        >
-          {isDarkMode ? (
-            <Sun className="w-6 h-6 text-yellow-500" />
-          ) : (
-            <Moon className="w-6 h-6 text-gray-700" />
-          )}
-        </button>
-      </div>
-
       {/* Hero Section */}
       <section className="min-h-screen flex items-center bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div
+              className={`space-y-8 transition-all duration-1000 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+            >
               <div className="space-y-4">
-                <p className="text-blue-600 dark:text-blue-400 font-medium text-lg">👋 Hello, I'm</p>
+                <p className="text-blue-600 dark:text-blue-400 font-medium text-lg">
+                  👋 Hello, I'm
+                </p>
                 <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                     Habeeb
@@ -60,7 +43,10 @@ const Home: React.FC = () => {
                   FrontEnd Developer
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
-                  I’m a frontend developer focused on building clean, responsive, and accessible interfaces. From landing pages to complex dashboards, I turn ideas into engaging digital experiences using React, JavaScript, and modern UI frameworks.
+                  I’m a frontend developer focused on building clean,
+                  responsive, and accessible interfaces. From landing pages to
+                  complex dashboards, I turn ideas into engaging digital
+                  experiences using React, JavaScript, and modern UI frameworks.
                 </p>
               </div>
 
@@ -116,7 +102,13 @@ const Home: React.FC = () => {
               </div>
             </div>
 
-            <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div
+              className={`relative transition-all duration-1000 delay-300 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+            >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
                 <div className="relative w-80 h-80 lg:w-96 lg:h-96 mx-auto">
