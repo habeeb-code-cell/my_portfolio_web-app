@@ -13,7 +13,7 @@ const Header: React.FC = () => {
     { name: 'About', href: '/about' },
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'Services', href: '/services' },
-    { name: 'Blog', href: '/blog' },
+    // { name: 'Blog', href: '/blog' },
     { name: 'Resume', href: '/resume' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
                 {item.name}
               </Link>
             ))}
-            <button
+            {/* <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
             >
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
               ) : (
                 <Moon className="w-5 h-5 text-gray-600" />
               )}
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile menu button */}

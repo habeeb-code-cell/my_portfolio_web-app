@@ -49,7 +49,7 @@ const About: React.FC = () => {
         "Graduated with honors, specializing in software engineering and web development.",
     },
     {
-      degree: "Full Stack Web Development",
+      degree: "Full Stack FrontEnd Development",
       school: "BlueHouse Technologies",
       period: "2025",
       description:
@@ -64,7 +64,7 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Front End Developer
+              FrontEnd Developer
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               "More than just code—I build digital experiences that inform,
@@ -140,7 +140,7 @@ const About: React.FC = () => {
                 </div>
                 <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
                   <h3 className="font-semibold text-gray-900 dark:text-white">
-                    100+ Cups of Coffee
+                    50+ Cups of Coffee
                   </h3>
                 </div>
               </div>

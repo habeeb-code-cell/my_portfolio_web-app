@@ -117,7 +117,7 @@ const Resume: React.FC = () => {
             </div>
             
             <a
-              href="/resume.pdf"
+              href="/resume.pdf" //error downloading PDF format//
               download
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
