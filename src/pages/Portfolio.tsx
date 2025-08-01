@@ -8,7 +8,7 @@ const Portfolio: React.FC = () => {
     {
       id: 1,
       title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, and Typescript.',
+      description: 'A modern and responsive platform frontend that allows users to browse, search, and purchase products seamlessly.  it features dynamic product listings, shopping cart, filtering, and secure checkout simulation.',
       image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
       category: 'frontend',
       technologies: ['React', 'Typescript', 'Tailwind CSS', 'Next JS'],
