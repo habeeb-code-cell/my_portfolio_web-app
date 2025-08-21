@@ -6,19 +6,56 @@ import {
   Github,
   Linkedin,
   Twitter,
-  Mail,
   Award,
+  Sun,
+  Moon,
 } from "lucide-react";
 
 const Home: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
+
+    // Set initial theme based on localStorage or system preference
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      setIsDarkMode(storedTheme === "dark");
+      document.documentElement.classList.toggle("dark", storedTheme === "dark");
+    } else {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      setIsDarkMode(prefersDark);
+      document.documentElement.classList.toggle("dark", prefersDark);
+      localStorage.setItem("theme", prefersDark ? "dark" : "light");
+    }
   }, []);
+
+  const toggleTheme = () => {
+    const newTheme = isDarkMode ? "light" : "dark";
+    setIsDarkMode(!isDarkMode);
+    document.documentElement.classList.toggle("dark", !isDarkMode);
+    localStorage.setItem("theme", newTheme);
+  };
 
   return (
     <div className="pt-20">
+      {/* Dark Mode Toggle Button */}
+      <div className="fixed top-4 right-4 z-50">
+        <button
+          onClick={toggleTheme}
+          className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full shadow-lg hover:scale-110 transition-all duration-300"
+        >
+          {isDarkMode ? (
+            <Sun className="w-6 h-6 text-yellow-500" />
+          ) : (
+            <Moon className="w-6 h-6 text-gray-700" />
+          )}
+        </button>
+      </div>
+
       {/* Hero Section */}
       <section className="min-h-screen flex items-center bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -92,12 +129,6 @@ const Home: React.FC = () => {
                   className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 hover:scale-110 transition-all duration-300"
                 >
                   <Twitter className="w-6 h-6 text-blue-400" />
-                </a>
-                <a
-                  href="mailto:mustaphahabeebullah2003@gmail.com"
-                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 hover:scale-110 transition-all duration-300"
-                >
-                  <Mail className="w-6 h-6 text-red-500" />
                 </a>
               </div>
             </div>
