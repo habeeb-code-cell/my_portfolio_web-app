@@ -78,7 +78,7 @@ const Home: React.FC = () => {
                   <Github className="w-6 h-6 text-gray-700 dark:text-gray-300" />
                 </a>
                 <a
-                  href="www.linkedin.com/in/habeebullah-mustapha-969ba237b"
+                  href="https://linkedin.com/in/habeebullah-mustapha-969ba237b"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 hover:scale-110 transition-all duration-300"
